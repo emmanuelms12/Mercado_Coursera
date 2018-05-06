@@ -9,13 +9,16 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Performs basic analytics on a data set.
  *
- * <Add Extended Description Here>
+ * This program performs basic analytics on data defined in the code. 
+ * Statistics reported are: minimum, maximum, mean, and median. The program 
+ * also sorts the data set from large to small. Both the statistics and the 
+ * sorted data are reported to the console.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Emmanuel Mercado
+ * @date 4/29/2018
  *
  */
 
@@ -35,9 +38,28 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
-
 }
 
-/* Add other Implementation File Code Here */
+void sort_array(unsigned char* data_array, SIZE_TYPE size)
+{
+}
+
+void print_array(unsigned char* data_array, SIZE_TYPE size)
+{
+}
+
+unsigned char find_minimum(unsigned char* data_array, SIZE_TYPE size)
+{
+}
+
+unsigned char find_maximum(unsigned char* data_array, SIZE_TYPE size)
+{
+}
+
+unsigned char find_mean(unsigned char* data_array, SIZE_TYPE size)
+{
+}
+
+unsigned char find_median(unsigned char* data_array, SIZE_TYPE size)
+{
+}
