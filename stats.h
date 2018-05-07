@@ -96,4 +96,18 @@ unsigned char find_mean(unsigned char*, unsigned int);
  */
 unsigned char find_median(unsigned char*, unsigned int);
 
+/**
+ * @brief Prints basic descriptive statistics of an array of data to the 
+ * console.
+ *
+ * Prints basic descriptive statistics of the data contained in the specified 
+ * array to the console. Results include: minimum, maximum, mean, and median.
+ *
+ * @param unsigned char*: pointer to the first element of the array.
+ * @param unsigned int  : size of the array
+ *
+ * @return Nothing.
+ */
+void print_statistics(unsigned char*, unsigned int);
+
 #endif /* __STATS_H__ */
