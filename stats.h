@@ -10,12 +10,12 @@
  *****************************************************************************/
 /**
  * @file stats.h 
- * @brief Performs basic analytics on a data set. 
+ * @brief Calculates basic descriptive statistics on a data set.
  *
- * This program performs basic analytics on data defined in the code. 
- * Statistics reported are: minimum, maximum, mean, and median. The program 
- * also sorts the data set from large to small. Both the statistics and the 
- * sorted data are reported to the console.
+ * This program calculates basic descriptive statistics on data defined in 
+ * the code. Results reported are: minimum, maximum, mean, and median. The 
+ * program also sorts the data set from large to small. Both the statistics and 
+ * the sorted data are reported to the console.
  *
  * @author Emmanuel Mercado
  * @date 5/5/2018
@@ -24,8 +24,6 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-#define SIZE_TYPE unsigned int
-
 /**
  * @brief Sorts an array of the specified size from largest to smallest
  *
@@ -33,11 +31,11 @@
  * smallest. The first element of the array contains the largest number.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
- * @return Sorted array passed as parameter.
+ * @return Array passed as parameter sorted from largest to smallest.
  */
-void sort_array(unsigned char*, SIZE_TYPE);
+void sort_array(unsigned char*, unsigned int);
 
 /**
  * @brief Prints the specified array to the screen.
@@ -45,11 +43,11 @@ void sort_array(unsigned char*, SIZE_TYPE);
  * Prints all elements of the array passed as a parameter.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
  * @return Nothing
  */
-void print_array(unsigned char*, SIZE_TYPE);
+void print_array(unsigned char*, unsigned int);
 
 /**
  * @brief Finds the minimum value in the specified array.
@@ -57,22 +55,22 @@ void print_array(unsigned char*, SIZE_TYPE);
  * Returns the minimum value in the specified array.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
  * @return Minimum value contained in the array.
  */
-unsigned char find_minimum(unsigned char[], SIZE_TYPE);
+unsigned char find_minimum(unsigned char[], unsigned int);
 /**
  * @brief Finds the maximum value in the specified array.
  *
  * Returns the maximum value in the specified array.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
  * @return Maximum value contained in the array.
  */
-unsigned char find_maximum(unsigned char*, SIZE_TYPE);
+unsigned char find_maximum(unsigned char*, unsigned int);
 
 /**
  * @brief Calculates the mean of the specified array.
@@ -80,11 +78,11 @@ unsigned char find_maximum(unsigned char*, SIZE_TYPE);
  * Returns the mean value of the specified array.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
  * @return Mean value of the elements in the array.
  */
-unsigned char find_mean(unsigned char*, SIZE_TYPE);
+unsigned char find_mean(unsigned char*, unsigned int);
 
 /**
  * @brief Calculates the median of the specified array.
@@ -92,10 +90,10 @@ unsigned char find_mean(unsigned char*, SIZE_TYPE);
  * Returns the median value of the specified array.
  *
  * @param unsigned char*: pointer to the first element of the array.
- * @param SIZE_TYPE     : size of the array
+ * @param unsigned int  : size of the array
  *
  * @return Median value of the elements in the array.
  */
-unsigned char find_median(unsigned char*, SIZE_TYPE);
+unsigned char find_median(unsigned char*, unsigned int);
 
 #endif /* __STATS_H__ */

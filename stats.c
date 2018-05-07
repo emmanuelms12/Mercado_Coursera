@@ -10,12 +10,12 @@
  *****************************************************************************/
 /**
  * @file stats.c
- * @brief Performs basic analytics on a data set.
+ * @brief Calculates basic descriptive statistics on a data set.
  *
- * This program performs basic analytics on data defined in the code. 
- * Statistics reported are: minimum, maximum, mean, and median. The program 
- * also sorts the data set from large to small. Both the statistics and the 
- * sorted data are reported to the console.
+ * This program calculates basic descriptive statistics on data defined in 
+ * the code. Results reported are: minimum, maximum, mean, and median. The 
+ * program also sorts the data set from large to small. Both the statistics and 
+ * the sorted data are reported to the console.
  *
  * @author Emmanuel Mercado
  * @date 4/29/2018
@@ -51,12 +51,12 @@ void main() {
 
 }
 
-void sort_array(unsigned char* data_array, SIZE_TYPE size)
+void sort_array(unsigned char* data_array, unsigned int size)
 {
-	for (SIZE_TYPE base_idx=0; base_idx<size-1; base_idx++)
+	for (unsigned int base_idx=0; base_idx<size-1; base_idx++)
 	{
 //		printf("[%d]:%d\n", base_idx, data_array[base_idx]);
-		for (SIZE_TYPE target_idx=base_idx+1; target_idx<size; target_idx++)
+		for (unsigned int target_idx=base_idx+1; target_idx<size; target_idx++)
 		{
 //			printf("\t[%d]:%d\n", target_idx, data_array[target_idx]);
 			if (data_array[target_idx]>data_array[base_idx])
@@ -72,39 +72,39 @@ void sort_array(unsigned char* data_array, SIZE_TYPE size)
 	return;
 }
 
-void print_array(unsigned char* data_array, SIZE_TYPE size)
+void print_array(unsigned char* data_array, unsigned int size)
 {
-	for (SIZE_TYPE idx=0; idx<size; idx++)
+	for (unsigned int idx=0; idx<size; idx++)
 	{
 		printf("[%d]:%d\n", idx, data_array[idx]);
 	}
 	return;
 }
 
-unsigned char find_minimum(unsigned char* data_array, SIZE_TYPE size)
+unsigned char find_minimum(unsigned char* data_array, unsigned int size)
 {
 	unsigned char min=data_array[0];
-	for (SIZE_TYPE target_idx=1; target_idx<size; target_idx++)
+	for (unsigned int target_idx=1; target_idx<size; target_idx++)
 	{
 		min=data_array[target_idx]<min ? data_array[target_idx] : min;
 	}
 	return min;
 }
 
-unsigned char find_maximum(unsigned char* data_array, SIZE_TYPE size)
+unsigned char find_maximum(unsigned char* data_array, unsigned int size)
 {
 	unsigned char max=data_array[0];
-	for (SIZE_TYPE target_idx=1; target_idx<size; target_idx++)
+	for (unsigned int target_idx=1; target_idx<size; target_idx++)
 	{
 		max=data_array[target_idx]>max ? data_array[target_idx] : max;
 	}
 	return max;
 }
 
-unsigned char find_mean(unsigned char* data_array, SIZE_TYPE size)
+unsigned char find_mean(unsigned char* data_array, unsigned int size)
 {
 	unsigned long acc=0;
-	for (SIZE_TYPE target_idx=1; target_idx<size; target_idx++)
+	for (unsigned int target_idx=1; target_idx<size; target_idx++)
 	{
 		acc+=data_array[target_idx];
 	}
@@ -112,16 +112,16 @@ unsigned char find_mean(unsigned char* data_array, SIZE_TYPE size)
 	return acc/size;
 }
 
-void copy_array(unsigned char* source_array, unsigned char* target_array, SIZE_TYPE size)
+void copy_array(unsigned char* source_array, unsigned char* target_array, unsigned int size)
 {
-	for (SIZE_TYPE idx=0; idx<size; idx++)
+	for (unsigned int idx=0; idx<size; idx++)
 	{
 		target_array[idx]=source_array[idx];
 	}
 	return;
 }
 
-unsigned char find_median(unsigned char* data_array, SIZE_TYPE size)
+unsigned char find_median(unsigned char* data_array, unsigned int size)
 {
 	unsigned char sorted_array[size];
 	copy_array(data_array, sorted_array, size);
